@@ -8,4 +8,13 @@ from django.shortcuts import render
 
 def index(request):
 
-    return HttpResponse("Hello, Django!")
+  #  return HttpResponse("Hello, Django!")
+    #render渲染模板
+    #request,template_name,content=None
+
+    #模拟数据查询
+    context = {
+        'name':'点击有惊喜'
+    }
+
+    return render(request,'book/index.html',context=context)
